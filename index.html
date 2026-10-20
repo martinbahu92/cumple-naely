@@ -105,11 +105,11 @@
             font-weight: 300;
         }
 
-        /* Reproductor de Música */
+        /* Reproductor de Música Optimizado con Botón Directo */
         .music-section {
             background: var(--dark-color);
             color: white;
-            padding: 20px;
+            padding: 25px 20px;
             border-radius: 20px;
             text-align: center;
             margin-bottom: 30px;
@@ -118,24 +118,27 @@
         }
 
         .music-section h3 {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #ffb3c6;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 150px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #000;
+        .music-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 77, 109, 0.4);
         }
 
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .music-btn:hover {
+            background: var(--purple-color);
+            transform: scale(1.05);
         }
 
         section {
@@ -211,11 +214,13 @@
             z-index: 10;
         }
 
+        /* Mejora de Alta Nitidez en Imágenes */
         .polaroid img {
             width: 100%;
-            height: 150px;
+            height: 160px;
             object-fit: cover;
             border-radius: 2px;
+            image-rendering: -webkit-optimize-contrast; /* Forzar alta definición */
         }
 
         .polaroid p {
@@ -263,12 +268,11 @@
             <p class="subtitle">Celebrando tus 26 años</p>
         </header>
 
-        <!-- Reproductor de Música (Río Roma - Mi Persona Favorita) -->
+        <!-- Reproductor de Música Optimizado con Botón -->
         <div class="music-section">
-            <h3>🎶 Dale play a nuestra canción 🎶</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Y3r01hK0k_I?autoplay=0&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <h3>🎶 Nuestra canción especial 🎶</h3>
+            <p style="font-size: 0.9rem; color: #ddd; margin-bottom: 15px;">Mi Persona Favorita - Río Roma</p>
+            <a href="https://www.youtube.com/watch?v=Y3r01hK0k_I" target="_blank" class="music-btn">▶ Escuchar Canción</a>
         </div>
 
         <section>
@@ -286,7 +290,7 @@
             <p style="font-size: 1.05rem; color: #444;">El 28 de octubre cumplimos <strong>8 años y 3 meses</strong> caminando juntos de la mano, compartiendo risas, canciones y momentos inolvidables.</p>
         </section>
 
-        <!-- Galería de Fotos Reales -->
+        <!-- Galería de Fotos Reales de Alta Nitidez -->
         <section>
             <h2>Nuestros Recuerdos Favoritos</h2>
             <div class="gallery">
