@@ -105,7 +105,7 @@
             font-weight: 400;
         }
 
-        /* Reproductor de Música Optimizado para Celular */
+        /* Reproductor de Música */
         .music-section {
             background: var(--dark-color);
             color: white;
@@ -273,7 +273,7 @@
             <p class="subtitle">Celebrando tus 26 años</p>
         </header>
 
-        <!-- Reproductor optimizado -->
+        <!-- Reproductor optimizado con enlace directo en línea -->
         <div class="music-section">
             <h3>🎶 Dale Play a nuestra canción 🎶</h3>
             <button class="music-btn" id="playBtn">Reproducir ▶</button>
@@ -348,7 +348,7 @@
             setTimeout(() => { heart.remove(); }, 6000);
         }, 400);
 
-        /* Control de Música Forzado para Celular */
+        /* Control de Música */
         const musicBtn = document.getElementById('playBtn');
         const bgMusic = document.getElementById('bgMusic');
         let isPlaying = false;
@@ -360,7 +360,7 @@
                     musicBtn.textContent = 'Pausar ⏸';
                 }).catch(error => {
                     console.log("Error de reproducción:", error);
-                    alert('Por favor, toca otra vez el botón para iniciar la música.');
+                    alert('Toca de nuevo el botón para iniciar la música.');
                 });
             } else {
                 bgMusic.pause();
