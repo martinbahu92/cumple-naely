@@ -105,7 +105,7 @@
             font-weight: 400;
         }
 
-        /* Reproductor de Música Interactivo */
+        /* Reproductor de Música Optimizado para Celular */
         .music-section {
             background: var(--dark-color);
             color: white;
@@ -195,7 +195,7 @@
             margin-top: 15px;
         }
 
-        /* Marcos Polaroid con color y vida */
+        /* Marcos Polaroid coloridos y vivos */
         .polaroid {
             background: linear-gradient(145deg, #ffffff, #fff1f2);
             padding: 12px 12px 28px 12px;
@@ -273,11 +273,11 @@
             <p class="subtitle">Celebrando tus 26 años</p>
         </header>
 
-        <!-- Reproductor con enlace de audio directo ultra estable -->
+        <!-- Reproductor optimizado -->
         <div class="music-section">
             <h3>🎶 Dale Play a nuestra canción 🎶</h3>
             <button class="music-btn" id="playBtn">Reproducir ▶</button>
-            <audio id="bgMusic" loop>
+            <audio id="bgMusic" preload="auto">
                 <source src="https://cdns.clictune.com/audio/2023/04/rio-roma-mi-persona-favorita.mp3" type="audio/mp3">
                 Tu navegador no soporta audio.
             </audio>
@@ -348,7 +348,7 @@
             setTimeout(() => { heart.remove(); }, 6000);
         }, 400);
 
-        /* Control de Música */
+        /* Control de Música Forzado para Celular */
         const musicBtn = document.getElementById('playBtn');
         const bgMusic = document.getElementById('bgMusic');
         let isPlaying = false;
@@ -358,8 +358,9 @@
                 bgMusic.play().then(() => {
                     isPlaying = true;
                     musicBtn.textContent = 'Pausar ⏸';
-                }).catch(e => {
-                    alert('Toca de nuevo para reproducir la música');
+                }).catch(error => {
+                    console.log("Error de reproducción:", error);
+                    alert('Por favor, toca otra vez el botón para iniciar la música.');
                 });
             } else {
                 bgMusic.pause();
